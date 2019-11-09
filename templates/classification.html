@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Itellihack</title>
+</head>
+<style type="text/css">
+	input[type=text], select {
+  		width: 30%;
+  	}
+
+	input[type=button] {
+  		width: 40%;
+	}
+	
+</style>
+
+<body>
+<center>
+	<div class="jumbotron">
+		<form action="http://localhost:5000/result" method="post">
+		<h2><b>Crop Prediction</b></h2>
+		<br>
+  		<fieldset>
+    		<div class="form-group">
+      			<label for="getPhLevel">Ph level of Soil</label>
+      			<input type="text" class="form-control" name="ph" placeholder="PH level" value="{{ph}}">
+    		</div>
+
+    		<div class="form-group">
+      			<label for="getNitrogen">Nitrogen Level</label>
+      			<input type="text" class="form-control" name="n" placeholder="Nitrogen" value="{{n}}">
+    		</div>
+
+        <div class="form-group">
+            <label for="getPhosphurus">Phosphurus</label>
+            <input type="text" class="form-control" name="p" placeholder="Phosphurus" value="{{p}}">
+        </div>
+
+        <div class="form-group">
+            <label for="getPotassium">Potassium</label>
+            <input type="text" class="form-control" name="k" placeholder="Potassium" value="{{k}}">
+        </div>
+
+        <div class="form-group">
+            <label for="getDepth">Depth</label>
+            <input type="text" class="form-control" name="depth" placeholder="Depth" value="{{depth}}">
+        </div>
+
+        <div class="form-group">
+            <label for="getRainfall">Rainfall</label>
+            <input type="text" class="form-control" name="rainfall" placeholder="Rainfall" value="{{rainfall}}">
+        </div>
+
+    		<div class="form-group">
+      			<label for="getTeperature">Temperature</label>
+      			<input type="text" class="form-control" name="temp" placeholder="Temperature" value="{{temp}}">
+    		</div>
+
+    		<input type="submit" class="btn btn-info">
+  		</fieldset>
+	</form>
+	</div>
+  <div>
+    <h3>
+      The Predicted output is:
+      <p>{{output}}</p>
+    </h3>
+  </div>
+</center>
+</body>
+</html>
